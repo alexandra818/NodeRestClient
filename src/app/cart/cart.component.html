@@ -26,8 +26,8 @@
       <mat-card-content>
         <img class="cover" [src]="car.image_url" alt="bike">
         <p>
-          <label for="id">Image</label>
-          <input [(ngModel)]="car.image_url" type="text" class="form-control" placeholder="Image" aria-label="ID">
+          <label for="id">Image Url:</label>
+          <input [(ngModel)]="car.image_url" type="text" class="form-control" placeholder="Image" aria-label="Image">
         </p>
         <p>
           <label for="id">ID:</label>
@@ -35,7 +35,7 @@
         </p>
         <p>
           <label for="price">Make</label>
-          <input [(ngModel)]="car.make" type="text" class="form-control" placeholder="Make" aria-label="desc"
+          <input [(ngModel)]="car.make" type="text" class="form-control" placeholder="Make" aria-label="price"
             aria-describedby="basic-addon1">
         </p>
         <p>
@@ -44,8 +44,18 @@
             aria-describedby="basic-addon1">
         </p>
         <p>
-          <label for="description">Description</label>
-          <input [(ngModel)]="car.description" type="text" class="form-control" placeholder="Description" aria-label="qty"
+          <label for="description">Description:</label>
+          <input [(ngModel)]="car.description" type="text" class="form-control" placeholder="Description"
+            aria-label="desc" aria-describedby="basic-addon1">
+        </p>
+        <p>
+          <label for="price">Price</label>
+          <input [(ngModel)]="car.price" type="text" class="form-control" placeholder="Price" aria-label="price"
+            aria-describedby="basic-addon1">
+        </p>
+        <p>
+          <label for="quantity">Quantity</label>
+          <input [(ngModel)]="car.quantity" type="text" class="form-control" placeholder="Quantity" aria-label="qty"
             aria-describedby="basic-addon1">
         </p>
       </mat-card-content>

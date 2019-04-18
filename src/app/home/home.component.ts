@@ -20,7 +20,7 @@ loggedIn = false;
       this.loggedIn = false;
       this.router.navigate(['login']);
     } else {
-      this.loggedIn = false;
+      this.loggedIn = true;
     }
   }
 

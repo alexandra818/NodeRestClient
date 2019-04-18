@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastService } from '../toast/toast.service';
 import { HttpService } from '../../shared-service/http.service';
+
 @Component({
   selector: 'app-main-nav',
   templateUrl: './main-nav.component.html',
@@ -21,6 +22,14 @@ export class MainNavComponent implements OnInit {
   showAbout() {
     this.toastService.showToast('success', 7000, 'This application was created by Lucas Phan (C).');
     this.http.testing();
+  }
+
+  async logout() {
+    const resp = await this.http.logout();
+    if (resp.statusCode === 200) {
+      localStorage.removeItem('id_token');
+      this.router.navigate(['login']);
+    }
   }
 
 }
