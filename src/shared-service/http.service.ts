@@ -13,6 +13,10 @@ export class HttpService {
     this.apiURL = environment.apiURL;
   }
 
+  testing() {
+    console.log('from http service testing.....');
+  }
+
   // get('car');
   async get(path: string) {
     const resp = await this.http.get(this.apiURL + path, this.headers).toPromise();
